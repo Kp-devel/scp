@@ -16,9 +16,9 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="emp_cod" class="col-form-label text-md-right">Usuario</label>
-                                <input id="emp_cod" type="text" class="form-control form-control-sm @error('emp_cod') is-invalid @enderror" name="emp_cod" value="{{ old('emp_cod') }}" required autofocus>
-                                @error('emp_cod')
+                                <label for="fld_cod_usu" class="col-form-label text-md-right">Usuario</label>
+                                <input id="fld_cod_usu" type="text" class="form-control form-control-sm @error('fld_cod_usu') is-invalid @enderror" name="fld_cod_usu" value="{{ old('fld_cod_usu') }}" required autofocus>
+                                @error('fld_cod_usu')
                                     <span class="invalid-feedback" role="alert">
                                         <small>{{ $message }}</small>
                                     </span>

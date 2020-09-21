@@ -12,7 +12,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/panelcontrolllamadas';
+    protected $redirectTo = '/home';
     
     public function __construct()
     {
@@ -21,17 +21,13 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {        
-        $sql=collect(DB::connection('mysql')->select(DB::raw("
+        $sql=collect(DB::select(DB::raw("
             SELECT
-                car_id_FK AS idcartera
+                fld_cod_ofi
             FROM
-                creditoy_cobranzas.empleado e
-            LEFT JOIN creditoy_cobranzas.cliente c ON c.emp_tel_id_FK = e.emp_id and cli_est = 0 AND cli_pas = 0
-            WHERE
-                emp_id=:id
-            AND emp_est = 0
-            AND emp_pas = 0
-            AND emp_tip_acc = 1
+                tbl_usuario
+            where
+                fld_nivel=0
             LIMIT 1
         "),array("id"=>auth()->user()->emp_id)));
         
@@ -46,7 +42,7 @@ class LoginController extends Controller
     }
 
     public function username(){
-        return 'emp_cod';
+        return 'fld_cod_usu';
     }
 
 

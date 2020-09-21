@@ -2,17 +2,17 @@
 
 @section('panel-contenido')           
     <div class="contenedor">
-        @if($opcion=='contacto')
-            <busqueda-paleta :tipo="1"/>
+        @if($opcion=='contacto')          
+            <busqueda-paleta :tipo="1" :datos="{{$data}}" :filtros="{{$filtros}}"/>
         @endif
         @if($opcion=='nocontacto')
-            <busqueda-paleta :tipo="2"/>
+            <busqueda-paleta :tipo="2" :datos="{{$data}}" :filtros="{{$filtros}}"/>
         @endif
         @if($opcion=='compromisoscaidos')
-            <busqueda-adicional :tipo="1"/>
+            <busqueda-adicional :tipo="1" :filtros="{{$filtros}}"/>
         @endif
         @if($opcion=='compromisospendientes')
-            <busqueda-adicional :tipo="2"/>
+            <busqueda-adicional :tipo="2" :filtros="{{$filtros}}"/>
         @endif
         @if($opcion=='operativos')
             <div class="d-flex pb-3">

@@ -15,22 +15,14 @@
                         <li class="nav-item pt-1 px-2 text-right d-flex">
                             <div>
                                 <p class="font-11 mb-0 font-weight-bold">Usuario</p>
-                                <a href="#" class="text-black">Cerrar Sesión</a>
-                            </div>
-                            <i class="fa fa-headset fa-2x pl-2 pt-2"></i>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <!-- <a href="#" class="nav-link dropdown-toggle px-0" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="img/center.jpeg" alt="" width="35px" height="35px" class=" rounded-circle border">
-                            </a> -->
-                            <!-- <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdown-configuracion">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a href="{{ route('logout') }}" class="text-black" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Cerrar Sesión
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
-                            </div> -->
+                            </div>
+                            <i class="fa fa-headset fa-2x pl-2 pt-2"></i>
                         </li>
                     </ul>
             </div>

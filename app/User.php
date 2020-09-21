@@ -9,12 +9,11 @@ use Illuminate\Support\Facades\Session;
 
 class User extends Authenticatable
 {
-    protected $connection = 'mysql';
-    protected $table = "empleado";
-    protected $primaryKey = "emp_id";
+    protected $table = "tbl_usuario";
+    protected $primaryKey = "fld_id";
 
     protected $fillable = [
-        'emp_cod','emp_cla', 'password', 'emp_nom'
+        'fld_cod_usu','fld_nom_usu', 'password'
     ];
 
     protected $hidden = [
